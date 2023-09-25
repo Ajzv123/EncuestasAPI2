@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using EncuestasAPI2.DTO;
 
 namespace EncuestasAPI2.Models;
 
@@ -182,4 +183,6 @@ public partial class EncuestasAppContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    public DbSet<EncuestasAPI2.DTO.UsuarioDTO> UsuarioDTO { get; set; } = default!;
 }
